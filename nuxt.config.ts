@@ -3,12 +3,17 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ['~/assets/styles/layout.scss', '~/assets/styles/misc.scss', '~/assets/styles/components.scss'],
 
+  router: {
+    base: '/WebPackXBR/'
+  },
+  
   build: { transpile: ['@jsquash/png', '@jsquash/oxipng'] },
   vite: {
     optimizeDeps: { exclude: ['@jsquash/png', '@jsquash/oxipng'] },
     worker: { format: 'es' },
   },
   app: {
+    baseURL: '/WebPackXBR/',
     head: {
       title: 'PackXBR',
       link: [
