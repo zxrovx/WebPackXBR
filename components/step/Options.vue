@@ -17,7 +17,7 @@ onMounted(() => updateValue('threads', Math.max(navigator.hardwareConcurrency - 
       <div class="col spaceEvenly">
         <label for="scaleFactor">Scale Factor</label>
         <select id="scaleFactor" :value="$props.options.scale" @change="(e) => updateValue('scale', e.target.value)">
-          <option v-for="value in [0, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024]" :key="value" :value="value">
+          <option v-for="value in [0, 2, 4, 6, 8, 10, 12]" :key="value" :value="value">
             {{ value }}x
           </option>
         </select>
